@@ -1,0 +1,21 @@
+
+/* Пример № 10 */
+.actions10 {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    outline: 1px solid black;
+    list-style: none;
+}
+
+.button10 {
+    padding: 0;
+    border: none;
+}
+
+
+.button10-icon {
+    width: 100px;
+    height: 100px;
+    fill: red;
+}
