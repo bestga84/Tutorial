@@ -366,17 +366,17 @@ img {
 }
 
 
-/* .button10-icon {
+.button10 {
+    padding: 0;
+    border: none;
+}
+
+
+.button10-icon {
     width: 100px;
     height: 100px;
-} */
-
-
-/* .button10-icon {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    stroke-width: 0;
-    stroke: currentColor;
-    fill: currentColor;
-  } */
+    fill: yellow;
+}
+.button10-icon:hover {
+    fill: tomato;
+}
