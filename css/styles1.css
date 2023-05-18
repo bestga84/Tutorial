@@ -375,8 +375,72 @@ img {
 .button10-icon {
     width: 100px;
     height: 100px;
-    fill: yellow;
+    fill: teal;
+    background-color: yellow;
 }
 .button10-icon:hover {
     fill: tomato;
+}
+
+
+
+/* Пример № 11 */
+.actions11 {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    outline: 1px solid black;
+    list-style: none;
+}
+
+.button11 {
+    padding: 0;
+    border: none;
+    width: 100px;
+    height: 100px;
+    color: teal;
+    border-radius: 50%;    
+    background-color: yellow;
+}
+
+.button11:hover {
+    color: tomato;
+    background-color: aqua;
+}
+
+.button11-icon {
+    width: 50px; 
+    height: 50px;
+    fill: currentColor;
+}
+
+
+
+
+/* Пример № 12 */
+.actions12 {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    outline: 1px solid black;
+    list-style: none;
+}
+
+.button12 {
+    padding: 0;
+    border: none;
+    width: 100px;
+    height: 100px;
+    color: teal;
+    border-radius: 50%;    
+    background-color: yellow;
+}
+
+.button12:hover {
+    color: tomato;
+    background-color: aqua;
+}
+
+.button12-icon {
+    fill: currentColor;
 }
