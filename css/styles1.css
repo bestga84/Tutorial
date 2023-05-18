@@ -401,7 +401,8 @@ img {
 }
 
 .button11:hover {
-    fill: tomato;
+    color: tomato;
+    background-color: aqua;
 }
 
 .button11-icon {
@@ -409,7 +410,7 @@ img {
     height: 100px;
     fill: currentColor;
 }
-.button11-icon:hover {
+/* .button11-icon:hover {
     fill: tomato;
     background-color: aqua;
-}
+} */
