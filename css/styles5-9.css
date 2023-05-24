@@ -1,446 +1,210 @@
-/* Время 55:25,  */
-
 /* Пример № 1 */
-img {    
-    border-radius: 10px;
-    background-color: lime;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    outline: 1px solid black;
-}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f9f9fd;
+  }
+  
+  .container1 {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .box1 {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    margin: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  }
+  
+  .box1.relative1 {
+    position: relative;
+    top: 50px;
+    left: 120px;
+  }
+  
+  .box1:nth-child(1) {
+    background-color: teal;
+  }
+  
+  .box1:nth-child(2) {
+    background-color: orange;
+  }
+  
+  .box1:nth-child(3) {
+    background-color: palevioletred;
+  }
+  
 
 
 
 /* Пример № 2 */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
+
+/* * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f9f9fd;
+  } */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-.box {
-    height: 250px;
-    width: calc(50% - 20px);
-    margin: 10px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 8px 8px;
+.container2 {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 
-.box:nth-child(1) {
-    background-color: aqua;
-    background-image: url("../img/sun.png");
-    background-repeat: no-repeat;
-    background-position: 100px 20%;
+.thumb2 {
+  position: relative;
+  margin: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
-.box:nth-child(2) {
-    background-color: orange;
-    background-image: url("../img/cloud.png");
-    background-repeat: repeat-x;
+.thumb2 > .label2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 8px 16px;
+  border-bottom-left-radius: 4px;
+
+  font-family: sans-serif;
+  font-size: 24px;
+  background-color: #2196f3;
+  color: #fff;
 }
 
-.box:nth-child(3) {
-    background-color: yellowgreen;
-    background-image: url("../img/cloud.png");
-    background-repeat: repeat-y;
-}
 
-.box:nth-child(4) {
-    background-color: tomato;
-    background-image: url("../img/sun.png");
-}
-
-.box:nth-child(5) {
-    background-color: aqua;
-    background-image: url("../img/sun.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-.box:nth-child(6) {
-    background-color: aqua;
-    background-image: url("../img/sun.png");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-}
-
-.box:nth-child(7) {
-    background-color: yellowgreen;
-    background-image: url("../img/cloud.png");
-    background-repeat: no-repeat;
-    background-size: 300px;
-}
-
-.box:nth-child(8) {
-    background-color: tomato;
-    background-image: url("../img/sun.png");
-    background-size: 75px;
-}
-
-.box:nth-child(9) {
-    background-color: aqua;
-    background-image: url("../img/sun.png");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-}
-
-.box:nth-child(10) {
-    background-color: orange;
-    background-image: url("../img/sun.png");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
-}
 
 
 
 /* Пример № 3 */
-.overlay {
-    max-width: 800px;
-    height: 380px;
-    margin-left: auto;
-    margin-right: auto;
-    outline: 1px solid black;
-    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)), url("../img/fon-fish.jpg");
-    background-color: black;
-    /* background-image:  url("../img/fon-fish.jpg"); */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
 
-
-
-/* Пример № 4 */
-.button {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: teal;
-    color: #fff;
-    border-radius: 3px;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.button:hover,
-.button:focus {
-    background-color: #red;
-}
-
-.button > .icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    /* background-color: #red; */
-    background-image: url("../img/sun.png");
-    background-size: contain;
-}
-
-
-
-/* Пример № 5 */
-.button2 {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: teal;
-    color: #fff;
-    border-radius: 3px;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.button2:hover,
-.button2:focus {
-    background-color: #red;
-}
-
-.button2::before {
-    content: "";
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    /* background-color: red; */
-    background-image: url("../img/sun.png");
-    background-size: contain;
-}
-
-.button2::after {
-    content: "";
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
-    /* background-color: red; */
-    background-image: url("../img/sun.png");
-    background-size: contain;
-}
-
-
-
-
-/* Пример № 6 */
-.list {
-    display: flex;
-    padding: 0;
-    list-style: none;
-}
-
-.list-item {
-    width: 350px;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 4px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-/* Здесь сделать не по ширине */
-/* .list-item::before {
+/* * {
+    box-sizing: border-box;
+  } */
+  
+  body {
+    font-family: sans-serif;
+    line-height: 1.5;
+  }
+  
+  .chat-button {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+  
     display: inline-block;
-    content: "";
-    width: 40px;
-    height: 40px;
-    outline: 1px solid red;
-} */
-
-/* Здесь сделать по ширине 100% ширины */
-.list-item::before {
-    display: block;
-    content: "";
-    height: 100px;
-    outline: 1px solid red;
-    background-image: url("../img/benefits-astronaut.svg");
+    width: 64px;
+    height: 64px;
+  
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1653/1653630.png");
     background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #ccc;
-}
-
-.list-item > .title {
-    margin-top: 0;
-}
-
-.list-item > .text {
-    margin-top: 0;
-    margin-bottom: 0;
-}
+  
+    cursor: pointer;
+  }
+  
 
 
+  /* Пример № 4 */
 
-/* Пример № 7 */
-.list7 {
-    display: flex;
-    padding: 0;
-    list-style: none;
-}
-
-.list-item7 {
-    width: 350px;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 4px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-
-/* Здесь сделать по ширине 100% ширины */
-.list-item7::before {
-    display: block;
-    content: "";
-    height: 100px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #ccc;
-}
-
-.list-item7:nth-child(1)::before {
-    background-image: url("../img/benefits-astronaut.svg");
-}
-
-.list-item7:nth-child(2)::before {
-    background-image: url("../img/benefits-details.svg");
-}
-
-
-.list-item7 > .title7 {
-    margin-top: 0;
-}
-
-.list-item7 > .text7 {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-
-
-/* Пример № 8 */
-.list8 {
-    display: flex;
-    padding: 0;
-    list-style: none;
-}
-
-.list-item8 {
-    width: 350px;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 4px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-
-/* Здесь сделать по ширине 100% ширины */
-.list-item8::before {
-    display: block;
-    content: "";
-    height: 100px;
-    background-size: 50px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #ccc;
-    border-radius: 50%;
-}
-
-.icon-astronaut::before {
-    background-image: url("../img/benefits-astronaut.svg");
-}
-
-.icon-antenna::before {
-    background-image: url("../img/benefits-details.svg");
-}
-
-/* .icon-astronaut:hover {
-    background-color: yellow;
-} */
-
-.list-item8 > .title8 {
-    margin-top: 0;
-}
-
-.list-item8 > .text8 {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-
-
-
-/* Пример № 9 */
-/*9-1*/
-.icon9 {
-    width: 66px;
-    height: 70px;
-    color: orange
-}
-
-
-/*9-2*/
-.icon9:hover .letter91 {
-    fill: red;
-}
-.icon9:hover .letter92 {
-    fill: green;
-}
-
-
-/*9-3*/
-.icon9 .letter93 {
-    fill: currentColor;   /* Это будет цвет из .icon9{}- color: orange*/
-}
-.icon9:hover {
-    color: pink;
-}
-
-
-
-
-/* Пример № 10 */
-.actions10 {
-    display: flex;
-    padding: 0;
+  /* * {
+    box-sizing: border-box;
+  }
+  
+  body {
     margin: 0;
-    outline: 1px solid black;
-    list-style: none;
-}
-
-
-.button10 {
-    padding: 0;
-    border: none;
-}
-
-
-.button10-icon {
-    width: 100px;
-    height: 100px;
-    fill: teal;
-    background-color: yellow;
-}
-.button10-icon:hover {
-    fill: tomato;
-}
-
-
-
-/* Пример № 11 */
-.actions11 {
-    display: flex;
-    padding: 0;
+    font-family: sans-serif;
+    line-height: 1.5;
+    background-color: #f9f9fd;
+    color: #2a2a2a;
+  } */
+  
+  .section4 {
+    margin-bottom: 20px;
+  }
+  
+  .section-title4 {
+    position: sticky;
+    top: -1px;
+  
     margin: 0;
-    outline: 1px solid black;
-    list-style: none;
-}
-
-.button11 {
-    padding: 0;
-    border: none;
-    width: 100px;
-    height: 100px;
-    color: teal;
-    border-radius: 50%;    
-    background-color: yellow;
-}
-
-.button11:hover {
-    color: tomato;
-    background-color: aqua;
-}
-
-.button11-icon {
-    width: 50px; 
-    height: 50px;
-    fill: currentColor;
-}
-
-
-
-
-/* Пример № 12 */
-.actions12 {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    outline: 1px solid black;
-    list-style: none;
-}
-
-.button12 {
-    padding: 0;
-    border: none;
-    width: 100px;
-    height: 100px;
-    color: teal;
-    border-radius: 50%;    
-    background-color: yellow;
-}
-
-.button12:hover {
-    color: tomato;
-    background-color: aqua;
-}
-
-.button12-icon {
-    fill: currentColor;
-}
+    padding: 16px;
+    background-color: #ccc;
+    text-align: center;
+    text-transform: uppercase;
+  
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  }
+  
+  .section-text4 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  
+  .section4:nth-child(1) .section-title {
+    color: #fff;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      #606dbc,
+      #606dbc 10px,
+      #465298 10px,
+      #465298 20px
+    );
+  }
+  
+  .section4:nth-child(2) .section-title {
+    background-image: repeating-linear-gradient(
+      to right,
+      #f6ba52,
+      #f6ba52 10px,
+      #ffd180 10px,
+      #ffd180 20px
+    );
+  }
+  
+  .section4:nth-child(3) .section-title {
+    color: #fff;
+    background-image: repeating-radial-gradient(
+      circle,
+      purple,
+      purple 10px,
+      #4b026f 10px,
+      #4b026f 20px
+    );
+  }
+  
+  .section4:nth-child(4) .section-title {
+    color: #fff;
+    background-image: repeating-linear-gradient(
+      to right,
+      #ff8a00,
+      #ff8a00 10px,
+      #e52e71 10px,
+      #e52e71 20px
+    );
+  }
+  
