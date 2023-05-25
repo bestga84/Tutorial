@@ -272,3 +272,179 @@ img {
       background-color: #4caf50;
     }
     
+
+
+/* Пример № 9-3-1 */
+
+/* * {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+} */
+
+.box9-3-1 {
+  border: 2px solid tomato;
+  width: 400px;
+  height: 200px;
+}
+
+.button9-3-1 {
+  display: inline-block;
+  margin-top: 30px;
+  width: 360px;
+  font: inherit;
+}
+
+
+
+
+/* Пример № 9-3-2 */
+
+/* * {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+} */
+
+.box9-3-2 {
+  border: 2px solid tomato;
+  width: 400px;
+  height: 200px;
+
+  overflow: hidden;
+}
+
+.button9-3-2 {
+  display: inline-block;
+  margin-top: 30px;
+  width: 360px;
+  font: inherit;
+}
+
+
+
+/* Пример № 9-3-3 */
+
+/* * {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+} */
+
+.box9-3-3 {
+  border: 2px solid tomato;
+  width: 400px;
+  height: 200px;
+
+  overflow: scroll;
+}
+
+
+
+/* Пример № 9-3-4 */
+
+/* * {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+} */
+
+.box9-3-4 {
+  border: 2px solid tomato;
+  width: 400px;
+  height: 200px;
+
+  overflow: auto;
+}
+
+
+
+/* Пример № 9-3-5 */
+
+/* * {
+  box-sizing: border-box;
+} */
+
+.img9-3-5 {
+  display: block;
+  max-width: 100%;
+}
+
+.thumb9-3-5 {
+  border: 10px solid green;
+  border-radius: 50px;
+  width: 480px;
+
+  overflow: hidden;
+}
+
+
+
+/* Пример № 9-3-6 */
+
+/* * {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+  background-color: #f9f9fd;
+} */
+
+.h1-9-3-6 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.box9-3-6 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background-color: #bdbdbd;
+  overflow: hidden;
+}
+
+.overlay9-3-6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3f51b5;
+
+  transform: translatex(-100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.box9-3-6:hover .overlay9-3-6 {
+  transform: translatex(0);
+}
+
+/* .overlay9-3-6 p {
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+  font-size: 18px;
+}
+
+.overlay9-3-6 code {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 2px;
+  background-color: #fff;
+  color: #2a2a2a;
+} */
