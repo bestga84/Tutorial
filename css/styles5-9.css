@@ -1,3 +1,4 @@
+/* ==== Выпадающее меню ==== */
 .menu {
   padding: 0;
   margin: 0;
@@ -27,22 +28,58 @@
 
   text-decoration: none;
   background-color: teal;
+  color: white;
+
 }
 
 .submenu {
   position: absolute;
   left: 0;
   top: 100%;
+  /* bottom: 0; */
 
   width: 100%;
 
+  /* padding: 0; */
   margin: 0;
   list-style: none;
   padding: 10px;
+
   background-color: #ccc;
+
   display: none;
 }
 
 .submenu a {
   text-decoration: none;
+}
+
+
+
+/* ==== Модальное окно ==== */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 128, 0, 0.5);
+}
+
+.backdrop.is-hidden {
+  /* opacity: 0;
+  pointer-events: none; */
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-height: 300px;
+  min-width: 400px;
+  padding: 15px;
+
+  background-color: #ccc;
 }
