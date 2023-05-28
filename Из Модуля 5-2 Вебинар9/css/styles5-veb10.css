@@ -1,0 +1,694 @@
+/* Время ююю  */
+
+/* Пример № 1 */
+/* Переход задаётся в базовый класс (.btn), а не в ховер (.btn:hover) */
+.btn {
+    display: inline-flex;
+    border: none;
+    margin: 0;
+    padding: 10px 30px;
+    border-radius: 3px;
+    background-color: #008080;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+
+    /* Полная запись */
+    /* transition-property: background-color; */
+    /*transition-duration: 250ms;*/  /*Средняя скорость изменения*/
+    /* transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+    /* transition-delay: 500ms; */
+
+    /* Короткая запись */
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 500ms, color 500ms cubic-bezier(0.4, 0, 0.2, 1) 750ms;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #d87093;
+    color: yellow;
+}
+
+
+/* Пример № 2 */
+/* При ховере меняется иконка на кнопке */
+.btn2 {
+    position: relative;
+    display: inline-flex;
+    border: none;
+    margin: 0;
+    padding: 10px 30px;
+    border-radius: 3px;
+    background-color: #008080;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn2::before,
+.btn2::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn2::before {
+    margin-right: 5px;
+
+    /* background-color: red; */
+    background-image: url('../img/cloud.png');
+}
+
+.btn2:hover::before, .btn2:focus::before {
+    transform: translateY(-35px);
+}
+
+.btn2::after {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+
+    transform: translateY(calc(-50% + 35px));
+
+    /* background-color: orange; */
+    background-image: url('../img/sun.png');
+}
+
+.btn2:hover::after, .btn2:focus::after {
+    transform: translateY(-50%);
+}
+
+.btn2:hover,
+.btn2:focus {
+    background-color: #d87093;
+}
+
+
+
+/* Пример № 3 */
+/* При ховере меняется иконка на кнопке */
+.btn3 {
+    position: relative;
+    display: inline-flex;
+    border: none;
+    margin: 0;
+    padding: 10px 30px;
+    border-radius: 3px;
+    background-color: #008080;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn3::before,
+.btn3::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn3::after {
+    margin-left: 5px;
+
+    /* background-color: red; */
+    background-image: url('../img/cloud.png');
+}
+
+.btn3:hover::after, .btn3:focus::after {
+    transform: translateY(-35px);
+}
+
+.btn3::before {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+
+    transform: translateY(calc(-50% + 35px));
+
+    /* background-color: orange; */
+    background-image: url('../img/sun.png');
+}
+
+.btn3:hover::before, .btn3:focus::before {
+    transform: translateY(-50%);
+}
+
+.btn3:hover,
+.btn3:focus {
+    background-color: #d87093;
+}
+
+
+
+
+/* Пример № 4 */
+/* При ховере появляется подчеркивание */
+.menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.menu-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.menu-link {
+    outline: 1px solid black;
+
+    position: relative;
+
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: currentColor;
+}
+
+.menu-link::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+
+    opacity: 0;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.menu-link:hover::after {
+    opacity: 1;
+}
+
+
+
+
+/* Пример № 5 */
+/* При ховере появляется подчеркивание */
+/* .menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.menu-item:not(:last-child) {
+    margin-right: 10px;
+} */
+
+.menu-link2 {
+    outline: 1px solid black;
+
+    position: relative;
+
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: currentColor;
+}
+
+.menu-link2::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: block;
+    width: 0;
+    height: 5px;
+    background-color: red;
+
+    transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.menu-link2:hover::after {
+    width: 100%;
+}
+
+
+
+
+/* Пример № 6 */
+/* При ховере появляется подчеркивание */
+/* .menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.menu-item:not(:last-child) {
+    margin-right: 10px;
+} */
+
+.menu-link3 {
+    outline: 1px solid black;
+
+    position: relative;
+
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: currentColor;
+}
+
+.menu-link3::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+
+    transform: scaleX(0);
+    /* transform: scale(0, 0); */
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.menu-link3:hover::after {
+    transform: scaleX(1);
+    /* transform: scale(1, 1); */
+}
+
+
+
+/* Пример № 7 */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.product7 {
+    /* position: relative; */
+    width: 370px;
+
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.product7:hover .product-actions7 {
+    opacity: 1;
+}
+
+.product-thumb7 {
+    position: relative;
+}
+
+.product-thumb7::before {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 165, 0, 0.5);
+    opacity: 0;
+    transition: 500ms background-color linear;
+}
+
+.product-thumb7:hover:before{
+    opacity: 1;
+}
+
+
+.product-meta7 {
+    padding: 15px;
+}
+
+.product-name7 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.product-price7 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.product-actions7 {
+    outline: 3px solid orange;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+
+    opacity: 0;
+    transition: 500ms opacity linear;
+}
+
+.product-actions7 .icon7 {
+    width: 32px;
+    height: 32px;
+}
+
+
+
+
+/* Пример № 8 */
+/* img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+} */
+
+.product8 {
+    /* position: relative; */
+    width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.product8:hover .product-actions8 {
+    opacity: 1;
+}
+
+.product-thumb8 {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-overlay8 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 165, 0, 0.5);
+    transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
+
+    transform: translateX(-100%);
+}
+
+.product8:hover  .product-overlay8 {
+    transform: translateX(0);
+}
+
+
+.product-meta8 {
+    padding: 15px;
+}
+
+.product-name8 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.product-price8 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.product-actions8 {
+    outline: 3px solid orange;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+
+    opacity: 0;
+    transition: 250ms opacity linear;    
+}
+
+.product-actions8 .icon8 {
+    width: 32px;
+    height: 32px;
+}
+
+
+
+
+/* Пример № 9 */
+/* img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+} */
+
+.product9 {
+    /* position: relative; */
+    width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.product-thumb9 {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-overlay9 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 165, 0, 0.5);
+    transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
+
+    transform: translateX(-100%);
+}
+
+.product9:hover  .product-overlay9 {
+    transform: translateX(0);
+}
+
+
+.product-meta9 {
+    padding: 15px;
+}
+
+.product-name9 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.product-price9 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.product-actions9 {
+    outline: 3px solid orange;
+    position: absolute;
+    display: flex;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+
+    opacity: 0;
+    transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;    
+}
+
+.product9:hover .product-actions9 {
+    opacity: 1;
+}
+
+.product-actions9 .icon9 {
+    width: 32px;
+    height: 32px;
+}
+
+
+
+
+/* Пример № 10 */
+/* img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+} */
+
+.product10 {
+    /* position: relative; */
+    width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.product-thumb10 {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-overlay10 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 165, 0, 0.5);
+
+    transform: scale(0.5);
+    opacity: 0;
+    transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product10:hover  .product-overlay10 {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.product-meta10 {
+    padding: 15px;
+}
+
+.product-name10 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.product-price10 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.product-actions10 {
+    outline: 3px solid orange;
+    position: absolute;
+    display: flex;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+
+    opacity: 0;
+    transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;    
+}
+
+.product10:hover .product-actions10 {
+    opacity: 1;
+}
+
+.product-actions10 .icon10 {
+    width: 32px;
+    height: 32px;
+}
+
+
+
+/* Пример № 11 */
+.scene11 {
+    width: 300px;
+    height: 300px;
+    border: 3px solid teal;
+    perspective: 600px;
+}
+
+.box11 {
+    width: 100%;
+    height: 100%;
+    background-color: #d87093;
+    background-image: url('../img/sun.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: rotateY(0);
+
+    transition: transform 500ms linear;
+}
+
+.scene11:hover .box11 {
+    transform: rotateY(180deg);
+}
+
+
+
+/* Пример № 12 */
+/* Доделать */
+/* .scene12 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 3px solid teal;
+    perspective: 600px;
+}
+
+.box12 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #d87093;
+    background-image: url('../img/sun.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    
+    transform: rotateY(0);
+
+    transition: transform 500ms linear;
+}
+
+.scene12:hover .box12 {
+    transform: rotateY(90deg);
+}
+
+.box12 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #d87093;
+    background-image: url('../img/cloud.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: rotateY(90deg);
+
+    transition: transform 500ms linear 500ms;
+}
+
+.scene12:hover .box12 {
+    transform: rotateY(180deg);
+} */
