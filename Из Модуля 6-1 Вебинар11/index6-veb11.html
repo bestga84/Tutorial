@@ -93,43 +93,57 @@
 
    
         <!-- <h1>Пример. Выбираем свой уровень разработчика</h1> -->
-        <div role="group" class="gruop">
+        <div role="group" class="group">
             <h2 class="groupe-title">Уровень вашей экспертизы</h2>
 
+            <ul class="experince-options">
+                <li>
+                    <input type="radio" name="experience" value="juniorjunior" id="junior" checked>
+                    <label for="junior">Juniort</label>
+                </li>
 
-            <input type="radio" name="experience" value="juniorjunior" id="junior" checked>
-            <label for="junior">Juniort</label>
-            <input type="radio" name="experience" value="middlemiddle" id="middle">
-            <label for="middle">Middle</label>
-            <input type="radio" name="experience" value="seniorsenior" id="senior">
-            <label for="senior">Senior</label>
+                <li>
+                    <input type="radio" name="experience" value="middlemiddle" id="middle">
+                    <label for="middle">Middle</label>
+                </li>
+
+                <li>
+                    <input type="radio" name="experience" value="seniorsenior" id="senior">
+                    <label for="senior">Senior</label>
+                </li>
+            </ul>
         </div>
 
-        <label for="date">дата доклада</label>
-        <input 
-            type="datetime-local" 
-            name="date" 
-            id="date"
-            min="2020-04-12T10:00"
-            max="2020-04-15T17:00">
+        <div class="form-field">
+            <label for="date">Дата доклада</label>
+            <input 
+                class="date"
+                type="datetime-local" 
+                name="date" 
+                id="date"
+                min="2023-04-12T10:00"
+                max="2023-08-15T17:00">
+        </div>
 
-<br>
-        <label for="pdf">Загрузите копию доклада в pdf</label>
-        <input type="file" name="pdfpdf" id="pdf">
+        <div class="form-field">
+            <label for="pdf">Загрузите копию доклада в pdf</label>
+            <input type="file" name="pdfpdf" id="pdf">
+        </div>
 
-<br>
-        <label for="comment">Оставьте комментарий</label>
-        <textarea 
-            name="commentcomment" 
-            id="comment" 
-            rows="8"
-            placeholder="Уточните детали доклада"></textarea>
+        <div class="form-field">
+            <label for="comment">Оставьте комментарий</label>
+            <textarea 
+                class="comment"
+                name="commentcomment" 
+                id="comment" 
+                rows="8"
+                placeholder="Уточните детали доклада"></textarea>
+        </div>
 
-
-<br>
-        <input type="checkbox" name="policypolicy" id="policy">
-        <label for="policy">Соглашаюсь на обработку данных</label>
-
+        <div class="form-field">
+            <input type="checkbox" name="policypolicy" id="policy">
+            <label for="policy">Соглашаюсь на обработку данных</label>
+        </div>
 
         <button type="submit">Отправить заявку</button>
     </form>
