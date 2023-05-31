@@ -1,4 +1,4 @@
-/* Время ююю  */
+/* Время 32:38  */
 
 .form {
     padding: 20px;
@@ -14,8 +14,11 @@
     position: absolute;
     top: 50%;
     left: 30px;
-    background-color: teal;
     transform: translateY(-50%);
+    /* background-color: teal; */
+    /* color: #fff; */
+
+    transition: transform 250ms linear;
 }
 
 .form-input {
@@ -26,6 +29,31 @@
     border: 1px solid #2a2a2a;
 }
 
-.form-input:focus + .form-label {
-    color: red;
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    transform: translateY(-50px);
+    /* color: red; */
+}
+
+/* .form-input:placeholder-shown {
+    background-color: red;
+} */
+
+
+/* ==== Добавим иконку ==== */
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+
+    transform: translateY(-50%);
+
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: tomato;
+}
+
+.form-input:focus ~ .icon {
+    background-color: blue;
 }

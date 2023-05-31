@@ -14,27 +14,29 @@
     <!-- ПРАВИЛЬНЫЙ -->
 
         <!-- <h1>Пример. С телефоном, почтой.</h1> -->
-    <form class="form">
+    <form class="form" autocomplete="off">
         <div class="form-field">
             <input
                 class="form-input"           
                 type="text" 
                 name="name" 
-                id="name" 
-                placeholder="Пётр Петрович">
+                id="name"
+                placeholder=" ">
             <Label for="name" class="form-label">Имя</Label>
+            <span class="icon"></span>
             <!-- сначала идёт input, а потом Label. Это чтобы можно было сделать .form-input:focus + .form-label {} -->
         </div>
         
 
         <div class="form-field">
-            <Label for="mail" class="form-label">Почта</Label>
             <input 
                 class="form-input"
                 type="email" 
                 name="mail" 
                 id="mail2"
-                placeholder="my@mail.com">
+                placeholder=" ">
+            <Label for="email" class="form-label">Почта</Label>
+            <span class="icon"></span>
         </div>
 
         <button type="submit">Отправить заявку</button>
