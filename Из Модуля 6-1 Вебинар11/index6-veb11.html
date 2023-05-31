@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles6-veb11.css">
+
+</head>
+<body>
+    
+    <!-- Пример № 1 -->
+    <!-- ПРАВИЛЬНЫЙ -->
+    <!-- <h1>Пример № 1. Форма</h1>
+
+    <form class="js-speaker-form">
+        <Label for="name">Имя</Label>
+        <input type="text" name="user-name" id="name">
+        
+        <Label>
+            Имя
+            <input type="text" name="user-name">
+        </Label>
+
+    </form> -->
+    
+
+
+    <!-- Пример № 2 -->
+    <!-- ПРАВИЛЬНЫЙ -->
+    <h1>Пример № 3. Выбираем темы на которые хотим делать доклад. (Радиобаттоны и Чекбоксы)</h1>
+
+    <form class="js-speaker-form">
+        <!-- <h1>Пример. С телефоном, почтой.</h1> -->
+        <form class="js-speaker-form">
+            <Label for="name2">Имя</Label>
+            <input type="text" name="user-name2" id="name2">
+    <br>          
+            <Label for="telephone2">Телефон</Label>
+            <input type="tel" name="user-telephone2" id="telephone2">
+    <br>
+            <Label for="mail2">Почта</Label>
+            <input type="email" name="user-mail2" id="mail2">
+    <br>
+            <button type="submit">Отправить заявку</button>
+    <br>
+    <br>
+
+        <!-- <h1>Пример. Выбираем темы на которые хотим делать доклад. (Радиобаттоны и Чекбоксы)</h1> -->
+        <div role="group">
+            <input type="checkbox" name="topic" value="htmlhtml" id="html" checked>
+            <label for="html">HTML</label>
+    
+            <input type="checkbox" name="topic" value="csscss" id="css" checked>
+            <label for="css">CSS</label>
+    
+            <input type="checkbox" name="topic" value="jsjs" id="js" >
+            <label for="js">JavaScript</label>
+            <!-- У одной чекбоксов name="" должен быть одинаковый -->
+            <!-- Атрибут role="" - для повішения семантики в несемантической разметке. 
+            Индексатор прочитает это как группу элементов.
+        А флексбокс здесь не применяется. -->
+        </div>
+
+   
+        <!-- <h1>Пример. Выбираем свой уровень разработчика</h1> -->
+        <div role="group">
+            <input type="radio" name="experience" value="juniorjunior" id="junior" checked>
+            <label for="junior">Juniort</label>
+            <input type="radio" name="experience" value="middlemiddle" id="middle">
+            <label for="middle">Middle</label>
+            <input type="radio" name="experience" value="seniorsenior" id="senior">
+            <label for="senior">Senior</label>
+        </div>
+
+        <label for="date">дата доклада</label>
+        <input 
+            type="datetime-local" 
+            name="date" 
+            id="date"
+            min="2020-04-12T10:00"
+            max="2020-04-15T17:00">
+
+<br>
+        <label for="pdf">Загрузите копию доклада в pdf</label>
+        <input type="file" name="pdfpdf" id="pdf">
+
+<br>
+        <label for="comment">Оставьте комментарий</label>
+        <textarea name="commentcomment" id="comment" rows="8"></textarea>
+
+
+<br>
+        <input type="checkbox" name="policypolicy" id="policy">
+        <label for="policy">Соглашаюсь на обработку данных</label>
+
+    </form>
+
+
+
+
+    <script>
+        (() => {
+            document
+            .querySelector('.js-speaker-form')
+            .addEventListener('submit', e => {
+                e.preventDefault();
+
+                new FormData(e.currentTarget).forEach((value, name) =>
+                    console.log(`${name}: ${value}`),
+                );
+            });
+
+            // e.currentTarget.reset();
+        })();
+    </script>
+</body>
+</html>
