@@ -9,3 +9,65 @@ textarea {
     resize: none
 }
 
+
+
+.form {
+    width: 600px;
+    outline: 1px solid tomato;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.form-field {
+    /* outline: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-field label {
+    margin-bottom: 5px;
+}
+
+.form-field input {
+    margin: 0;
+    padding: 6px 10px;
+    border-radius: 3px;
+    border: 1px solid blue;
+}
+
+.form-field input::placeholder {
+    color: tomato;
+}
+
+
+
+
+.group {
+
+}
+
+.groupe-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.topic-options {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.topic-options li {
+    display: flex;
+    align-items: center;
+}
+
+.topic-options input[type="checkbox"] {
+}
+
+.topic-options label {
+    font-size: 20px;
+    margin-left: 10px;
+}

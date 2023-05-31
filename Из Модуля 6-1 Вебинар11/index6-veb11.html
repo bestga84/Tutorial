@@ -29,43 +29,74 @@
 
     <!-- Пример № 2 -->
     <!-- ПРАВИЛЬНЫЙ -->
-    <h1>Пример № 3. Выбираем темы на которые хотим делать доклад. (Радиобаттоны и Чекбоксы)</h1>
+    <h1>Пример № 3. ФОРМА</h1>
 
-    <form class="js-speaker-form">
         <!-- <h1>Пример. С телефоном, почтой.</h1> -->
-        <form class="js-speaker-form">
+    <form class="form js-speaker-form" autocomplete="on">
+        <div class="form-field">
             <Label for="name2">Имя</Label>
-            <input type="text" name="user-name2" id="name2">
-    <br>          
+            <input                 
+                type="text" 
+                name="user-name2" 
+                id="name2" 
+                placeholder="Пётр Петрович"
+                autofocus>
+        </div>
+        
+        <div class="form-field">
             <Label for="telephone2">Телефон</Label>
-            <input type="tel" name="user-telephone2" id="telephone2">
-    <br>
+            <input 
+                type="tel" 
+                name="user-telephone2"
+                id="telephone2"
+                placeholder="+38**-***-**-**">
+        </div>
+
+        <div class="form-field">
             <Label for="mail2">Почта</Label>
-            <input type="email" name="user-mail2" id="mail2">
-    <br>
-            <button type="submit">Отправить заявку</button>
-    <br>
-    <br>
+            <input 
+                type="email" 
+                name="user-mail2" 
+                id="mail2"
+                placeholder="my@mail.com">
+        </div>
+
 
         <!-- <h1>Пример. Выбираем темы на которые хотим делать доклад. (Радиобаттоны и Чекбоксы)</h1> -->
-        <div role="group">
-            <input type="checkbox" name="topic" value="htmlhtml" id="html" checked>
-            <label for="html">HTML</label>
-    
-            <input type="checkbox" name="topic" value="csscss" id="css" checked>
-            <label for="css">CSS</label>
-    
-            <input type="checkbox" name="topic" value="jsjs" id="js" >
-            <label for="js">JavaScript</label>
-            <!-- У одной чекбоксов name="" должен быть одинаковый -->
-            <!-- Атрибут role="" - для повішения семантики в несемантической разметке. 
-            Индексатор прочитает это как группу элементов.
-        А флексбокс здесь не применяется. -->
+
+        <div role="group" class="gruop">
+            <h2 class="groupe-title">Тема доклада</h2>
+
+            <!-- Список опций -->
+            <ul class="topic-options">
+                <li>
+                    <input type="checkbox" name="topic" value="htmlhtml" id="html" checked>
+                    <label for="html">HTML</label>
+                </li>
+
+                <li>
+                    <input type="checkbox" name="topic" value="csscss" id="css" checked>
+                    <label for="css">CSS</label>
+                </li>
+
+                <li>
+                    <input type="checkbox" name="topic" value="jsjs" id="js" >
+                    <label for="js">JavaScript</label>
+                </li>
+                        <!-- У одной чекбоксов name="" должен быть одинаковый -->
+                <!-- Атрибут role="" - для повішения семантики в несемантической разметке. 
+                Индексатор прочитает это как группу элементов.
+                А флексбокс здесь не применяется. -->
+            </ul>
         </div>
+
 
    
         <!-- <h1>Пример. Выбираем свой уровень разработчика</h1> -->
-        <div role="group">
+        <div role="group" class="gruop">
+            <h2 class="groupe-title">Уровень вашей экспертизы</h2>
+
+
             <input type="radio" name="experience" value="juniorjunior" id="junior" checked>
             <label for="junior">Juniort</label>
             <input type="radio" name="experience" value="middlemiddle" id="middle">
@@ -88,13 +119,19 @@
 
 <br>
         <label for="comment">Оставьте комментарий</label>
-        <textarea name="commentcomment" id="comment" rows="8"></textarea>
+        <textarea 
+            name="commentcomment" 
+            id="comment" 
+            rows="8"
+            placeholder="Уточните детали доклада"></textarea>
 
 
 <br>
         <input type="checkbox" name="policypolicy" id="policy">
         <label for="policy">Соглашаюсь на обработку данных</label>
 
+
+        <button type="submit">Отправить заявку</button>
     </form>
 
 
