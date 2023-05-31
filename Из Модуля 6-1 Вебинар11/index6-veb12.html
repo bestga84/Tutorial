@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles6-veb12.css">
+
+</head>
+<body>
+   
+    <!-- Пример № 2 -->
+    <!-- ПРАВИЛЬНЫЙ -->
+
+        <!-- <h1>Пример. С телефоном, почтой.</h1> -->
+    <form class="form">
+        <div class="form-field">
+            <input
+                class="form-input"           
+                type="text" 
+                name="name" 
+                id="name" 
+                placeholder="Пётр Петрович">
+            <Label for="name" class="form-label">Имя</Label>
+            <!-- сначала идёт input, а потом Label. Это чтобы можно было сделать .form-input:focus + .form-label {} -->
+        </div>
+        
+
+        <div class="form-field">
+            <Label for="mail" class="form-label">Почта</Label>
+            <input 
+                class="form-input"
+                type="email" 
+                name="mail" 
+                id="mail2"
+                placeholder="my@mail.com">
+        </div>
+
+        <button type="submit">Отправить заявку</button>
+    </form>
+
+
+
+    
+    <!-- <script>
+        (() => {
+            document
+            .querySelector('.js-speaker-form')
+            .addEventListener('submit', e => {
+                e.preventDefault();
+
+                new FormData(e.currentTarget).forEach((value, name) =>
+                    console.log(`${name}: ${value}`),
+                );
+            });
+
+        })();
+    </script> -->
+</body>
+</html>

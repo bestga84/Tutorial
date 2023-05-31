@@ -1,0 +1,31 @@
+/* Время ююю  */
+
+.form {
+    padding: 20px;
+    margin: 20px;
+}
+
+.form-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    background-color: teal;
+    transform: translateY(-50%);
+}
+
+.form-input {
+    margin: 0;
+    padding: 10px 20px;
+    font: inherit;
+    border-radius: 3px;
+    border: 1px solid #2a2a2a;
+}
+
+.form-input:focus + .form-label {
+    color: red;
+}
