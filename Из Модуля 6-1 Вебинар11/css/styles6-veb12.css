@@ -27,6 +27,7 @@
 .form-input {
     margin: 0;
     padding: 10px 20px;
+    padding-left: 40px;
     font: inherit;
     border-radius: 3px;
     border: 1px solid #2a2a2a;
@@ -89,6 +90,7 @@
     width: 100%;
     margin: 0;
     padding: 10px 20px;
+    padding-left: 40px;
     font: inherit;
     border-radius: 3px;
     border: 1px solid #2a2a2a;
@@ -144,6 +146,7 @@
     width: 100%;
     margin: 0;
     padding: 10px 20px;
+    padding-left: 40px;
     font: inherit;
     border-radius: 3px;
     border: 1px solid #2a2a2a;
@@ -187,8 +190,9 @@
     width: 600px;
 }
 
-.form-field4 {
+.form-field4 {    
     position: relative;
+    display: block;
     margin-bottom: 20px;
 }
 
@@ -205,6 +209,7 @@
     width: 100%;
     margin: 0;
     padding: 10px 20px;
+    padding-left: 40px;
     font: inherit;
     border-radius: 3px;
     border: 1px solid #2a2a2a;
@@ -223,5 +228,71 @@
     background-color: tomato;
 }
 
+.form-field4:focus-within > .icon4 {
+    background-color: blue;
+}
+.form-field4:focus-within > .form-label4 {
+    transform: translateY(-50px);
+}
+.form-input4:not(:placeholder-shown) + .form-label4 {
+    transform: translateY(-50px);
+}
+
+/* Можно так оформить: */
+/* .form-field4:focus-within > .icon4 {
+    background-color: blue;
+}
+.form-field4:focus-within > .form-label4, 
+.form-input4:not(:placeholder-shown) + .form-label4 {
+    transform: translateY(-50px);
+} */
 
 /* === Конец примера № 4 === */
+
+
+
+
+/* === Начало примера № 5 === */
+/* Как правильно спрятать чекбокс */
+
+/* Это хороший фрагмент */
+/* .checkbox5 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+} */
+
+/* И Это хороший фрагмент */
+/* .checkbox5:checked {
+    width: 50px;
+    height: 50px;
+} */
+
+.checkbox5 {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+/*Это св-во сбрасывает всё. Но не поддерживается многими браузерами, т.к. это новое свойство. Добавлять его лучше чрез вендорные префиксы.*/
+}
+
+/* Добавить кастомную иконку */
+/* Так же можно сделать через span в html */
+/* .checkbox-label::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: tomato;
+}
+.checkbox5:checked ~ .checkbox-label::after {
+    background-color: green;
+} */
+
+.icon5 {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: tomato;
+}
+
+/* === Конец примера № 5 === */
