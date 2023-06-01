@@ -269,11 +269,25 @@
 } */
 
 .checkbox5 {
-    -webkit-appearance: none;
+    /* -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
+    appearance: none; */
 /*Это св-во сбрасывает всё. Но не поддерживается многими браузерами, т.к. это новое свойство. Добавлять его лучше чрез вендорные префиксы.*/
+
+/* Вот еще как хорошо скрыть элемент */
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+border: 0;
+padding: 0;
+
+white-space: nowrap;
+clip-path: inset(100%);
+clip: rect(0 0 0 0);
+overflow: hidden;
 }
+
 
 /* Добавить кастомную иконку */
 /* Так же можно сделать через span в html */
@@ -290,9 +304,46 @@
 
 .icon5 {
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-color: tomato;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    /* background-color: tomato; */
+
+    border: 2px solid #2a2a2a;
+    border-radius: 4px;
+
+    transition: transform 250ms linear;
+}
+.checkbox5:checked + .icon5 {
+    border-color: orange;
+    background-color: orange;
+    background-image: url('../img/icon-check.svg');
+    background-size: contain;
+    background-origin: border-box;
+    
+    transform: scale(1.2);;
 }
 
+
+/* Дополнительно */
+/* Добавить блочную */
+.checkbox-field {
+    display: flex;
+    align-items: center;
+
+    /* display: inline-block; */
+    /* outline: 1px solid black; */
+}
+
+/* отступы добавить */
+.form5 li {
+    margin-bottom: 10px;
+}
+
+.label5 {
+    transition: transform 250ms linear;
+}
+.checkbox5:checked ~ .label5 {
+    transform: translateX(20px);
+}
 /* === Конец примера № 5 === */
