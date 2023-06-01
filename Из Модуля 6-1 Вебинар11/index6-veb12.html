@@ -10,10 +10,11 @@
 </head>
 <body>
    
-    <!-- Пример № 2 -->
+    <!-- Пример № 1 -->
     <!-- ПРАВИЛЬНЫЙ -->
 
-        <!-- <h1>Пример. С телефоном, почтой.</h1> -->
+    <h1>Пример № 1. Выездные надписи.</h1>
+    <p>сначала идёт input, а потом Label. Это чтобы можно было сделать .form-input:focus + .form-label {}</p>
     <form class="form" autocomplete="off">
         <div class="form-field">
             <input
@@ -44,7 +45,100 @@
 
 
 
+    <h1>Пример № 2. Новая современная разметка.</h1>
+    <p>Label должен идти перед input</p>
+    <!-- span может идти и до Label, и после Label -->
+    <form class="form2" autocomplete="off">
+        <div class="form-field2">
+            <span class="icon2"></span>
+            <Label for="name" class="form-label2">Имя</Label>
+            <input
+                class="form-input2"           
+                type="text" 
+                name="name" 
+                id="name"
+                placeholder=" ">
+        </div>
+        
+
+        <div class="form-field2">
+            <span class="icon2"></span>
+            <Label for="email" class="form-label2">Почта</Label>
+            <input 
+                class="form-input2"
+                type="email" 
+                name="mail" 
+                id="mail2"
+                placeholder=" ">
+        </div>
+
+        <button type="submit">Отправить заявку</button>
+    </form>
+
+
+
+    <h1>Пример № 3. Новая современная разметка.</h1>
+    <p>сначала идёт input, а потом Label.</p>
+    <!-- span может идти и до Label, и после Label -->
+    <form class="form3" autocomplete="off">
+        <div class="form-field3">
+            <span class="icon3"></span>
+            <Label for="name" class="form-label3">Имя</Label>
+            <input
+                class="form-input3"           
+                type="text" 
+                name="name" 
+                id="name"
+                placeholder=" ">
+        </div>
+        
+
+        <div class="form-field3">
+            <span class="icon3"></span>
+            <Label for="email" class="form-label3">Почта</Label>
+            <input 
+                class="form-input3"
+                type="email" 
+                name="mail" 
+                id="mail2"
+                placeholder=" ">
+        </div>
+
+        <button type="submit">Отправить заявку</button>
+    </form>
     
+
+
+    <h1>Пример № 4.</h1>
+    <p>input, вложенный в метку, избавляемся от id</p>
+
+    <form class="form4" autocomplete="off">
+        <label for="text" class="form-field4">
+            <input
+            class="form-input4"           
+            type="text" 
+            name="name" 
+            placeholder=" ">
+            <span class="form-label4">Имя</span>
+            <span class="icon4"></span>
+        </label>
+
+        <label for="email" class="form-field4">
+            <input
+            class="form-input4"           
+            type="text" 
+            name="name" 
+            placeholder=" ">
+            <span class="form-label4">Почта</span>
+            <span class="icon4"></span>
+        </label>
+   
+        <button type="submit">Отправить заявку</button>
+    </form>
+
+
+
+
     <!-- <script>
         (() => {
             document

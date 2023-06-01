@@ -1,5 +1,8 @@
 /* Время 32:38  */
 
+
+
+/* === Начало примера № 1 === */
 .form {
     padding: 20px;
     margin: 20px;
@@ -57,3 +60,168 @@
 .form-input:focus ~ .icon {
     background-color: blue;
 }
+/* === Конец примера № 1 === */
+
+
+
+/* === Начало примера № 2 === */
+.form2 {
+    padding: 20px;
+    margin: 20px;
+    width: 600px;
+}
+
+.form-field2 {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-label2 {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+
+    transition: transform 250ms linear;
+}
+
+.form-input2 {
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+    font: inherit;
+    border-radius: 3px;
+    border: 1px solid #2a2a2a;
+}
+
+.icon2 {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+
+    transform: translateY(-50%);
+
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: tomato;
+}
+
+/* .form-field2:focus-within {
+    padding: 20px;
+    background-color: blue;
+} */
+.form-field2:focus-within > .icon2 {
+    background-color: blue;
+}
+/* === Конец примера № 2 === */
+
+
+
+
+/* === Начало примера № 3 === */
+.form3 {
+    padding: 20px;
+    margin: 20px;
+    width: 600px;
+}
+
+.form-field3 {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-label3 {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+
+    transition: transform 250ms linear;
+}
+
+.form-input3 {
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+    font: inherit;
+    border-radius: 3px;
+    border: 1px solid #2a2a2a;
+}
+
+.icon3 {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+
+    transform: translateY(-50%);
+
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: tomato;
+}
+
+/* .form-field2:focus-within {
+    padding: 20px;
+    background-color: blue;
+} */
+.form-field3:focus-within > .icon3 {
+    background-color: blue;
+}
+.form-field3:focus-within > .form-label3 {
+    transform: translateY(-50px);
+}
+.form-field3:not(:placeholder-shown) + .form-label3 {
+    transform: translateY(-50px);
+}
+/* === Конец примера № 3 === */
+
+
+
+
+/* === Начало примера № 4 === */
+.form4 {
+    padding: 20px;
+    margin: 20px;
+    width: 600px;
+}
+
+.form-field4 {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-label4 {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+
+    transition: transform 250ms linear;
+}
+
+.form-input4 {
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+    font: inherit;
+    border-radius: 3px;
+    border: 1px solid #2a2a2a;
+}
+
+.icon4 {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+
+    transform: translateY(-50%);
+
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: tomato;
+}
+
+
+/* === Конец примера № 4 === */
