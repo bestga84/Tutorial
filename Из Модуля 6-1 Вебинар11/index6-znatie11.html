@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles6-znatie11.css">
+
+</head>
+<body>
+   
+    <!-- Пример № 1 -->
+    <!-- Пример, похожий на д-з -->
+
+    <h1>Модуль 6, занятие № 1. Форма, похожая, как в д-з.</h1>
+
+<div class="modal">
+
+    <form action="contact-form">
+        <label class="contact-form-field">
+            <span> Имя* </span>
+            <span class="contact-form-input-wrapper">
+                <input name="user_name" type="text" class="contact-form-input" required>
+                <!-- По желанию d input можно добавить pattern -->
+
+                <!-- <svg>
+                    <use></use>
+                </svg> -->
+                <!-- Для иконки -->
+
+                <span class="contact-form-icon"></span>
+            </span>
+
+        </label>
+
+        <label class="contact-form-field" required>
+            Телефон*
+            <span class="contact-form-input-wrapper">
+                <input name="user_phone" type="text" class="contact-form-input">
+                <!-- По желанию d input можно добавить pattern -->
+
+                <!-- <svg>
+                    <use></use>
+                </svg> -->
+                <!-- Для иконки -->
+
+                <span class="contact-form-icon"></span>
+            </span>
+        </label>
+
+        <label class="contact-form-field">
+            Сообщение
+            <textarea name="user_message" class="contact-form-message" placeholder="Введите текст"></textarea>
+        </label>
+
+        <div class="contact-form-checkbox-wrapper">
+            <input name="accept-policy" type="checkbox" class="contact-form-checkbox" id="policy-checkbox" required>
+            <!-- В input можно не ставить value="", если чекбокс один -->
+            <label for="policy-checkbox" class="contact-form-checkbox-label">Соглашаюсь с рассылкий и принимаю <a href="">Условия договора</a></label>
+        </div>
+        
+        <button type="submit" class="contact-form-submit-btn">Отправить</button>
+    </form>
+   
+</div>
+
+</body>
+</html>
