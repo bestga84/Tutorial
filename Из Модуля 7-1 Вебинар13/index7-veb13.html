@@ -4,167 +4,186 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/styles6-veb11.css">
+    <title>БЭМ</title>
+    <link rel="stylesheet" href="./css/styles7-veb13.css">
 
 </head>
 <body>
-    
-    <!-- Пример № 1 -->
-    <!-- ПРАВИЛЬНЫЙ -->
-    <!-- <h1>Пример № 1. Форма</h1>
 
-    <form class="js-speaker-form">
-        <Label for="name">Имя</Label>
-        <input type="text" name="user-name" id="name">
-        
-        <Label>
-            Имя
-            <input type="text" name="user-name">
-        </Label>
-
-    </form> -->
-    
-
-
-    <!-- Пример № 2 -->
-    <!-- ПРАВИЛЬНЫЙ -->
-    <h1>Пример № 3. ФОРМА</h1>
-
-        <!-- <h1>Пример. С телефоном, почтой.</h1> -->
-    <form class="form js-speaker-form" autocomplete="on">
-        <div class="form-field">
-            <Label for="name2">Имя</Label>
-            <input                 
-                type="text" 
-                name="user-name2" 
-                id="name2" 
-                placeholder="Пётр Петрович"
-                autofocus>
-        </div>
-        
-        <div class="form-field">
-            <Label for="telephone2">Телефон</Label>
-            <input 
-                type="tel" 
-                name="user-telephone2"
-                id="telephone2"
-                placeholder="+38**-***-**-**">
-        </div>
-
-        <div class="form-field">
-            <Label for="mail2">Почта</Label>
-            <input 
-                type="email" 
-                name="user-mail2" 
-                id="mail2"
-                placeholder="my@mail.com">
-        </div>
-
-
-        <!-- <h1>Пример. Выбираем темы на которые хотим делать доклад. (Радиобаттоны и Чекбоксы)</h1> -->
-
-        <div role="group" class="gruop">
-            <h2 class="groupe-title">Тема доклада</h2>
-
-            <!-- Список опций -->
-            <ul class="topic-options">
-                <li>
-                    <input type="checkbox" name="topic" value="htmlhtml" id="html" checked>
-                    <label for="html">HTML</label>
-                </li>
-
-                <li>
-                    <input type="checkbox" name="topic" value="csscss" id="css" checked>
-                    <label for="css">CSS</label>
-                </li>
-
-                <li>
-                    <input type="checkbox" name="topic" value="jsjs" id="js" >
-                    <label for="js">JavaScript</label>
-                </li>
-                        <!-- У одной чекбоксов name="" должен быть одинаковый -->
-                <!-- Атрибут role="" - для повішения семантики в несемантической разметке. 
-                Индексатор прочитает это как группу элементов.
-                А флексбокс здесь не применяется. -->
-            </ul>
-        </div>
-
-
+    <h1>БЭМ</h1>
    
-        <!-- <h1>Пример. Выбираем свой уровень разработчика</h1> -->
-        <div role="group" class="group">
-            <h2 class="groupe-title">Уровень вашей экспертизы</h2>
+    <header class="page-header">
+        <nav class="page-header__nav">
+            <!-- Пример № 2-->
+    <!-- <h1>Пример № 2. Иконка</h1> -->
 
-            <ul class="experince-options">
-                <li>
-                    <input type="radio" name="experience" value="juniorjunior" id="junior" checked>
-                    <label for="junior">Juniort</label>
-                </li>
+    <a href="" class="logo page-header__logo">
+        <img src="../Из Модуля 7-1 Вебинар13/img/cloud.png" alt="Облако" class="logo__image">
+        <span>Технокряк</span>
+    </a>
 
-                <li>
-                    <input type="radio" name="experience" value="middlemiddle" id="middle">
-                    <label for="middle">Middle</label>
-                </li>
+    <!-- Пример № 1 -->
+    <!-- <h1>Пример № 1. Навигация</h1> -->
 
-                <li>
-                    <input type="radio" name="experience" value="seniorsenior" id="senior">
-                    <label for="senior">Senior</label>
-                </li>
-            </ul>
-        </div>
-
-        <div class="form-field">
-            <label for="date">Дата доклада</label>
-            <input 
-                class="date"
-                type="datetime-local" 
-                name="date" 
-                id="date"
-                min="2023-04-12T10:00"
-                max="2023-08-15T17:00">
-        </div>
-
-        <div class="form-field">
-            <label for="pdf">Загрузите копию доклада в pdf</label>
-            <input type="file" name="pdfpdf" id="pdf">
-        </div>
-
-        <div class="form-field">
-            <label for="comment">Оставьте комментарий</label>
-            <textarea 
-                class="comment"
-                name="commentcomment" 
-                id="comment" 
-                rows="8"
-                placeholder="Уточните детали доклада"></textarea>
-        </div>
-
-        <div class="form-field">
-            <input type="checkbox" name="policypolicy" id="policy">
-            <label for="policy">Соглашаюсь на обработку данных</label>
-        </div>
-
-        <button type="submit">Отправить заявку</button>
-    </form>
+    <ul class="site-nav">
+        <li class="site-nav__item site-nav__link--active">
+            <a href="" class="site-nav__link">
+                <span class="site-nav__icon">Иконка</span>
+                <span class="site-nav__label">О нас</span></a>
+        </li>
+        <li class="site-nav__item site-nav__link--active">
+            <a href="" class="site-nav__link">
+                <span class="site-nav__icon">Иконка</span>
+                <span class="site-nav__label">Портфолио</span></a>
+        </li>
+        <li class="site-nav__item site-nav__link--active">
+            <a href="" class="site-nav__link">
+                <span class="site-nav__icon">Иконка</span>
+                <span class="site-nav__label">Контакты</span></a>
+        </li>
+    </ul>
+        </nav>
 
 
 
+    </header>
 
-    <script>
-        (() => {
-            document
-            .querySelector('.js-speaker-form')
-            .addEventListener('submit', e => {
-                e.preventDefault();
 
-                new FormData(e.currentTarget).forEach((value, name) =>
-                    console.log(`${name}: ${value}`),
-                );
-            });
+    <!-- Пример № 3-->
+    <h1>Пример № 3. Кнопка</h1>
 
-            // e.currentTarget.reset();
-        })();
-    </script>
+    <button class="button">
+        <span class="button__icon">Иконка</span>
+        <span class="button__label">Текст кнопки</span>
+    </button>
+   
+
+    <!-- Пример № 4-->
+     <h1>Пример № 4. Набор карточек</h1>
+
+     <ul class="card-set">
+        <li class="card-set__item">
+            <article class="product">
+                <img src="../Из Модуля 7-1 Вебинар13/img/cloud.png" alt="Облако" class="productt__image">
+                <div class="product__meta">
+                    <h2 class="product__name">Название продукта</h2>
+                    <p class="product__price">100 грн</p>
+                    <button class="product__button">В корзину</button>
+                </div>
+            </article>
+        </li>
+        <li class="card-set__item">
+            <article class="product">
+                <img src="../Из Модуля 7-1 Вебинар13/img/cloud.png" alt="Облако" class="productt__image">
+                <div class="product__meta">
+                    <h2 class="product__name">Название продукта</h2>
+                    <p class="product__price">100 грн</p>
+                    <button class="product__button">В корзину</button>
+                </div>
+            </article>
+        </li>
+     </ul>
+
+    <!-- Пример № 5-->
+    <h1>Пример № 5. Секция</h1>
+
+    <section class="panel">
+        <h2 class="panel__title">Рекомендуемые</h2>
+
+        <ul class="card-set">
+            <li class="card-set__item">
+                <article class="product">
+                    <img src="../Из Модуля 7-1 Вебинар13/img/cloud.png" alt="Облако" class="productt__image">
+                    <div class="product__meta">
+                        <h2 class="product__name">Название продукта</h2>
+                        <p class="product__price">100 грн</p>
+                        <button class="product__button">В корзину</button>
+                    </div>
+                </article>
+            </li>
+            <li class="card-set__item">
+                <article class="product">
+                    <img src="../Из Модуля 7-1 Вебинар13/img/cloud.png" alt="Облако" class="productt__image">
+                    <div class="product__meta">
+                        <h2 class="product__name">Название продукта</h2>
+                        <p class="product__price">100 грн</p>
+                        <button class="product__button">В корзину</button>
+                    </div>
+                </article>
+            </li>
+         </ul>
+    </section>
+
+    <section class="panel">
+        <h2 class="panel__title">Новые поступления</h2>
+
+        <ul class="card-set">
+            <li class="card-set__item">
+                <article class="product">
+                    <img src="../Из Модуля 7-1 Вебинар13/img/cloud.png" alt="Облако" class="productt__image">
+                    <div class="product__meta">
+                        <h2 class="product__name">Название продукта</h2>
+                        <p class="product__price">100 грн</p>
+                        <button class="product__button">В корзину</button>
+                    </div>
+                </article>
+            </li>
+            <li class="card-set__item">
+                <article class="product">
+                    <img src="../Из Модуля 7-1 Вебинар13/img/cloud.png" alt="Облако" class="productt__image">
+                    <div class="product__meta">
+                        <h2 class="product__name">Название продукта</h2>
+                        <p class="product__price">100 грн</p>
+                        <button class="product__button">В корзину</button>
+                    </div>
+                </article>
+            </li>
+         </ul>
+    </section>
+
+
+    <!-- Пример № 6-->
+    <h1>Пример № 6. Футер</h1>
+
+    <footer class="page-footer">
+        <a href="" class="logo">
+            <img src="../Из Модуля 7-1 Вебинар13/img/cloud.png" alt="Облако" class="logo__image">
+            <span class="logo__text--inverse">Технокряк</span>
+        </a>
+    </footer>
+
+
+    <!-- Пример № 7-->
+    <h1>Пример № 7. </h1>
+
+    <ul class="card-set">
+        <li class="card-se">
+            <div class="team-member">
+                <img src="" alt="" class="team-member__image">
+                <h2 class="team-member__name"></h2>
+                <p class="team-member__position"></p>
+            </div>
+
+        </li>
+    </ul>
+
+    <!-- Пример № 8-->
+    <h1>Пример № 8. Микс</h1>
+
+    <footer class="page-footer">
+        <a href="" class="logo page-footer__logo">
+            <img src="../Из Модуля 7-1 Вебинар13/img/cloud.png" alt="Облако" class="logo__image">
+                <span class="logo__text--inverse">Технокряк</span>
+        </a>
+    </footer>
+
+
+    <!-- Пример № 9-->
+    <h1>Пример № 9. Микс</h1>
+
+    <p class="">Пополнение счёта выполнено</p>
+    <p class="">Внимание, будут изменены тарифы</p>
+    <p class="">Ошибка проведения транзакции</p>
+
 </body>
 </html>
