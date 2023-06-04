@@ -117,3 +117,60 @@
 .page-header__logo {
     margin-right: 50px;
 }
+
+
+
+
+/* Пример № 9 */
+
+/* notification */
+
+.notification {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+    max-width: 400px;
+    background-color: #ccc;
+    color: #fff;
+}
+
+.notification--success {
+    background-color: green;
+}
+.notification--warning {
+    background-color: orange;
+}
+.notification--error {
+    background-color: red;
+}
+
+.notification__icon {
+    font-size: 30px;
+}
+.notification__icon--prepend {
+    margin-right: 30px;
+}
+.notification__icon--append {
+    margin-left: 30px;
+}
+
+.notification:hover .notification__icon {
+    font-size: 60px;
+}
+
+
+/* Пример № 10 */
+
+.button {
+    width: 20px;
+    height: 20px;
+}
+
+.button__prepend {
+    margin-right: 20px;
+}
+
+.button__append {
+    margin-left: 20px;
+}

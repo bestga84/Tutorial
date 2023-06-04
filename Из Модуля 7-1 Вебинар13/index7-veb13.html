@@ -181,9 +181,33 @@
     <!-- Пример № 9-->
     <h1>Пример № 9. Микс</h1>
 
-    <p class="">Пополнение счёта выполнено</p>
-    <p class="">Внимание, будут изменены тарифы</p>
-    <p class="">Ошибка проведения транзакции</p>
+    <p class="notification notification--success">
+        Пополнение счёта выполнено
+        <span class="notification__icon notification__icon--append">🚀</span>
+    </p>
+    <p class="notification notification--warning">
+        Внимание, будут изменены тарифы
+        <span class="notification__icon"></span>
+    </p>
+    <p class="notification notification--error">
+        <span class="notification__icon notification__icon--prepend">👨‍🚀</span>
+        Ошибка проведения транзакции
+    </p>
+
+
+
+    <!-- Пример № 10-->
+    <h1>Пример № 10</h1>
+
+    <a href="#" class="button">
+        <span class="button__prepend">
+           🚀
+        </span>
+        <span class="button__body">My Button</span>
+        <span class="button__append">
+           👨‍🚀
+        </span>
+      </a>
 
 </body>
 </html>
