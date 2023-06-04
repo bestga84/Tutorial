@@ -1,0 +1,176 @@
+/* Время qqqq  */
+
+
+/* Page header */
+
+.page-header__nav {
+    display: flex;
+    align-items: start;
+}
+
+
+
+/* Пример № 1 */
+
+.site-nav {
+    display: flex;
+}
+
+.site-nav__item {
+    margin-right: 20px;
+}
+
+.site-nav__item:last-child {
+    margin-right: 0;
+}
+
+.site-nav__link {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: currentColor;
+}
+
+.site-nav__link--active {
+    color: teal;
+}
+
+.site-nav__link:hover {
+    color: orange;
+}
+
+.site-nav__icon {
+    display: inline-block;
+    padding: 5px;
+    background-color: teal;
+    color: #fff;
+}
+
+
+
+/* Пример № 2 */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #2a2a2a;
+}
+
+.logo__image {
+    margin-right: 4px;
+}
+
+
+.logo__text--inverse {
+    color:#fff;
+}
+
+
+
+/* Пример № 4 */
+
+/* Card set */
+
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+
+.card-set__item {
+    width: 300px;
+    margin: 15px;
+}
+
+/* Product */
+
+.product {}
+
+.productt__image {}
+
+.product__meta {}
+
+.product__name {}
+
+.product__price {}
+
+.product__button {}
+
+
+
+/* Пример № 6 */
+
+.page-footer {
+    background-color: #2a2a2a;
+}
+
+
+/* Пример № 8 */
+
+.page-footer__logo {
+    color: #fff;
+}
+
+.page-header__logo {
+    margin-right: 50px;
+}
+
+
+
+
+/* Пример № 9 */
+
+/* notification */
+
+.notification {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+    max-width: 400px;
+    background-color: #ccc;
+    color: #fff;
+}
+
+.notification--success {
+    background-color: green;
+}
+.notification--warning {
+    background-color: orange;
+}
+.notification--error {
+    background-color: red;
+}
+
+.notification__icon {
+    font-size: 30px;
+}
+.notification__icon--prepend {
+    margin-right: 30px;
+}
+.notification__icon--append {
+    margin-left: 30px;
+}
+
+.notification:hover .notification__icon {
+    font-size: 60px;
+}
+
+
+/* Пример № 10 */
+
+.button {
+    width: 20px;
+    height: 20px;
+}
+
+.button__prepend {
+    margin-right: 20px;
+}
+
+.button__append {
+    margin-left: 20px;
+}
