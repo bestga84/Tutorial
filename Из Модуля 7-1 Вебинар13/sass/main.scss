@@ -1,3 +1,145 @@
-body {
-    background-color: tomato;
+// Пример № 0
+// $color-qweqwe: skyblue;
+// $main-width: 600px;
+// $secondaryColor: red;
+
+// body {
+//     background-color: $color-qweqwe;
+//     width: $main-width;
+
+//     $secondaryColor: red;
+// }
+
+// p {
+//     color: $secondaryColor;
+// }
+
+
+
+
+
+// Пример № 1
+
+.section {
+    color: red;
+
+    .title {
+        color: limegreen;
+    }
+
+    .text {
+        color: teal;
+    }
+}
+
+
+
+
+// Пример № 2
+.section2 {
+    color: red;
+
+    &-title2 {
+        color: limegreen;
+
+        &--pink {
+            background-color: pink;
+        }
+    }
+
+    &-text2 {
+        color: teal;
+    }
+}
+
+
+
+
+// Пример № 3
+// Это плохо читабельное
+// .section3 {
+//     color: red;
+
+//     &__title3 {
+//         color: limegreen;
+
+//         &--pink {
+//             background-color: pink;
+//         }
+//     }
+
+//     &__text3 {
+//         color: teal;
+//     }
+// }
+
+// Это хорошо читабельное
+.section3 {
+    color: red;
+
+    &:hover {
+        color: blue;
+    }
+}
+
+.section3__title3 {
+    color: red;
+
+    &:hover {
+        color: green;
+    }
+
+    &--pink {
+        color: red;
+    }
+}
+
+.section3__text3 {
+    color: green;
+
+    &:hover {
+        color: red;
+    }
+}
+
+
+
+
+// Пример № 4
+.box {
+    background-color: red;
+}
+.button {
+    background-color: teal;
+
+    &:hover, &:focus {
+        color: black;
+    }
+
+    .box:hover & {
+        background-color: orange;
+    }
+}
+
+
+
+
+// Пример № 5
+// Выбираем соседний элемент
+// Можно ставить + ~ >
+.p55 {
+    & + & {
+        color: tomato;
+    }
+}
+
+
+
+// Пример № 6
+.list-item {
+    background-color: red;
+
+    &:nth-child(3) {
+        background-color: yellow;
+    }
 }
