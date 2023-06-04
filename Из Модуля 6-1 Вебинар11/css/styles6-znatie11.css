@@ -1,143 +1,119 @@
 /* Время qqqq  */
 
-.modal {
-    position: relative;
-    width: 528px;
-    height: 580px;
-    background-color: hsl(55, 56%, 87%);
-    border-radius: 4px;
-    padding: 40px;
-}
 
-.contact-form-field {
-    display: block;
-    margin-bottom: 10px;
-}
+/* Page header */
 
-.contact-form-input-wrapper {
-    position: relative;
-    margin-top: 6px;
-}
-
-.contact-form-input {
-    width: 100%;
-    height: 40px;
-    padding-left: 42px;
-    border: 1px solid #555;
-    border-radius: 5px;
-    transition: border-color 250ms linear;
-}
-
-.contact-form-input:focus {
-    outline: none;
-    border-color: tomato;
-}
-
-.contact-form-input:focus + .contact-form-icon {
-    background-color: tomato;
-}
-
-.contact-form-icon {
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-
-    display: block;
-    width: 18px;
-    height: 18px;
-    background-color: teal;
-    transition: background-color 250ms linear;
-}
-
-
-.contact-form-message {
-    width: 100%;
-    height: 100px;
-    margin-top: 6px;
-    padding: 10px 16px;
-    resize: none;
-    border: 1px solid #555;
-    border-radius: 5px;
-    transition: background-color 250ms linear;
-}
-
-.contact-form-message:focus {
-    outline: none;
-    border-color: tomato;
-}
-
-.contact-form-message::placeholder {
-    text-transform: uppercase;
-    color: #afafaf;
-}
-
-
-/* .contact-form-message:placeholder-shown {
-    border-color: lime;
-} */
-
-
-.contact-form-checkbox-wrapper {
-    margin-bottom: 10px;
-}
-
-
-.contact-form-checkbox-label {
+.page-header__nav {
     display: flex;
-    align-items: center;
-    font-size: 14px;
-}
-
-.contact-form-checkbox:checked + .contact-form-checkbox-label::before {
-    /* background-image: url('../img/icon-check.svg'); */
-    background-color: yellowgreen;
-    box-shadow: inset 0 0 0 4px #fff;
-}
-
-.contact-form-checkbox:focus + .contact-form-checkbox-label::before {
-    outline: 1px solid aquamarine;}
-
-.contact-form-checkbox-label::before {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    border: 1px solid #555;
-    cursor: pointer;
-    content: '';
-    margin-right: 10px;
+    align-items: start;
 }
 
 
-.visually-hidden {
-    position: absolute;
-width: 1px;
-height: 1px;
-margin: -1px;
-border: 0;
-padding: 0;
 
-white-space: nowrap;
-clip-path: inset(100%);
-clip: rect(0 0 0 0);
-overflow: hidden;
+/* Пример № 1 */
+
+.site-nav {
+    display: flex;
 }
 
+.site-nav__item {
+    margin-right: 20px;
+}
 
-.contact-form-submit-btn {
+.site-nav__item:last-child {
+    margin-right: 0;
+}
+
+.site-nav__link {
     display: block;
-    margin: 20px auto;
-
-    min-width: 160px;
-    padding: 12px 16px;
-    border: 1px solid blue;
-    border-radius: 25px;
-    background-color: transparent;
-    cursor: pointer;
-    transition: background-color 250ms linear, color 250ms linear;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: currentColor;
 }
-.contact-form-submit-btn:hover,
-.contact-form-submit-btn:focus {
-    background-color:aquamarine;
-    color:blue;
+
+.site-nav__link--active {
+    color: teal;
+}
+
+.site-nav__link:hover {
+    color: orange;
+}
+
+.site-nav__icon {
+    display: inline-block;
+    padding: 5px;
+    background-color: teal;
+    color: #fff;
+}
+
+
+
+/* Пример № 2 */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #2a2a2a;
+}
+
+.logo__image {
+    margin-right: 4px;
+}
+
+
+.logo__text--inverse {
+    color:#fff;
+}
+
+
+
+/* Пример № 4 */
+
+/* Card set */
+
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+
+.card-set__item {
+    width: 300px;
+    margin: 15px;
+}
+
+/* Product */
+
+.product {}
+
+.productt__image {}
+
+.product__meta {}
+
+.product__name {}
+
+.product__price {}
+
+.product__button {}
+
+
+
+/* Пример № 6 */
+
+.page-footer {
+    background-color: #2a2a2a;
+}
+
+
+/* Пример № 8 */
+
+.page-footer__logo {
+    color: #fff;
+}
+
+.page-header__logo {
+    margin-right: 50px;
 }
