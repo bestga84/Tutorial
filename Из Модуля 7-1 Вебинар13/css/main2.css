@@ -1,3 +1,15 @@
+.notification-success, .notification-error {
+  background-color: #ccc;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.features {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 /*! modern-normalize v2.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -231,4 +243,30 @@ Add the correct display in Chrome and Safari.
 */
 summary {
   display: list-item;
+}
+
+.logo {
+  background-color: orange;
+}
+
+.page-header {
+  background-color: red;
+}
+
+.notification-error {
+  background-color: red;
+}
+
+.notification-success {
+  background-color: green;
+}
+
+p {
+  border: 2px solid green;
+  border-bottom: 2px solid green;
+}
+
+div {
+  border: 3px dashed yellow;
+  border-bottom: 3px dashed yellow;
 }/*# sourceMappingURL=main2.css.map */

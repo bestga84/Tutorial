@@ -1,0 +1,43 @@
+.page-header {
+    background-color: $bg-color;
+}
+
+
+
+// Пример № 8
+// Плейсхолдеры
+// %notification {
+//     background-color: #ccc;
+//     font-size: 20px;
+//     padding: 20px;
+// }
+.notification-error {
+    @extend %notification;
+    background-color: red;
+}
+.notification-success {
+    @extend %notification;
+    background-color: green;
+}
+
+
+
+.features {
+    @extend %list;
+}
+
+
+
+// Пример № 9
+// Миксины
+@mixin bordered($color, $type, $px: 2px) {
+    border: $px $type $color;
+    border-bottom: $px $type $color;
+}
+
+p {
+    @include bordered(green, solid);
+}
+div {
+    @include bordered(yellow, dashed, 3px);
+}

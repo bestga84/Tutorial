@@ -1,3 +1,6 @@
-@import './variables';
+@import './utils/variables';
+@import './utils/placeholders';
 @import './base/normalize';
+@import './components/logo';
+@import './components/page-header';
 
