@@ -28,6 +28,7 @@
 
 
 
+
 // Пример № 9
 // Миксины
 @mixin bordered($color, $type, $px: 2px) {
@@ -41,3 +42,117 @@ p {
 div {
     @include bordered(yellow, dashed, 3px);
 }
+
+
+
+
+// Пример № 10
+// Без Миксина всё фиксированно
+%centeredFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    @extend %centeredFlex;
+}
+
+div {
+    @extend %centeredFlex;
+}
+
+
+// А с Миксином всё удобно и хорошо
+@mixin centeredFlex2($type) {
+    display: $type;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    @include centeredFlex2(flex);
+}
+
+div {
+    @include centeredFlex2(flex);
+}
+
+button {
+    @include centeredFlex2(inline-flex);
+}
+
+// Ещё вот с Миксином пример
+// @mixin centeredFlex3($type: flex) {
+//     display: $type;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+p {
+    @include centeredFlex3();
+}
+
+div {
+    @include centeredFlex3();
+}
+
+button {
+    @include centeredFlex3(inline-flex);
+}
+
+
+
+// Пример № 11
+// Про иконки
+.icon {
+    width: 100px;
+    height: 100px;
+}
+
+.icon-facebook11 {
+    background-image: url('../img/sun.png');
+}
+.icon-github11 {
+    background-image: url('../img/sun.png');
+}
+.icon-linkedin11 {
+    background-image: url('../img/sun.png');
+}
+.icon-twitter11 {
+    background-image: url('../img/sun.png');
+}
+
+
+// Теперь этот пример запишем так
+$icons: 'facebook11', 'github11', 'linkedin11', 'twitter11';
+// @each аналогично циклу for в программировании 
+@each $iconName in $icons {
+    .icon-#{$iconName} {
+        // background-color: teal;
+        background-image: url("../img/#{$iconName}.png");
+    }
+}
+
+
+
+// Пример № 12
+// Ещё вот. С помощью миксинов
+$socialIcons: 'facebook11', 'github11', 'linkedin11', 'twitter11';
+
+// @mixin centeredIcons($iconList) {
+//     @each $iconName in $iconList {
+//         .icon-#{$iconName} {
+//             background-image: url("../img/#{$iconName}.png");
+//         }
+//     }
+// }
+
+@include centeredIcons($socialIcons);
+
+
+
+
+$techIcons: "html", "css", "js";
+
+@include centeredIcons($techIcons);

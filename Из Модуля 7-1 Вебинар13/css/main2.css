@@ -269,4 +269,153 @@ p {
 div {
   border: 3px dashed yellow;
   border-bottom: 3px dashed yellow;
+}
+
+div, p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+}
+
+.icon-facebook11 {
+  background-image: url("../img/sun.png");
+}
+
+.icon-github11 {
+  background-image: url("../img/sun.png");
+}
+
+.icon-linkedin11 {
+  background-image: url("../img/sun.png");
+}
+
+.icon-twitter11 {
+  background-image: url("../img/sun.png");
+}
+
+.icon-facebook11 {
+  background-image: url("../img/facebook11.png");
+}
+
+.icon-github11 {
+  background-image: url("../img/github11.png");
+}
+
+.icon-linkedin11 {
+  background-image: url("../img/linkedin11.png");
+}
+
+.icon-twitter11 {
+  background-image: url("../img/twitter11.png");
+}
+
+.icon-facebook11 {
+  background-image: url("../img/facebook11.png");
+}
+
+.icon-github11 {
+  background-image: url("../img/github11.png");
+}
+
+.icon-linkedin11 {
+  background-image: url("../img/linkedin11.png");
+}
+
+.icon-twitter11 {
+  background-image: url("../img/twitter11.png");
+}
+
+.icon-html {
+  background-image: url("../img/html.png");
+}
+
+.icon-css {
+  background-image: url("../img/css.png");
+}
+
+.icon-js {
+  background-image: url("../img/js.png");
 }/*# sourceMappingURL=main2.css.map */

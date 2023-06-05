@@ -1,0 +1,14 @@
+@mixin centeredFlex3($type: flex) {
+    display: $type;
+    align-items: center;
+    justify-content: center;
+}
+
+// К примеру № 12
+@mixin centeredIcons($iconList) {
+    @each $iconName in $iconList {
+        .icon-#{$iconName} {
+            background-image: url("../img/#{$iconName}.png");
+        }
+    }
+}
